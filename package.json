@@ -19,16 +19,14 @@
   },
   "private": true,
   "engines": {
-    "node": ">=18"
+    "node": ">=20"
   },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "lint:fix": "next lint --fix",
-    "test:open": "playwright test --ui-host=0.0.0.0",
-    "test:run": "playwright test"
+    "lint:fix": "next lint --fix"
   },
   "dependencies": {
     "@arcjet/decorate": "^1.0.0-beta.7",
