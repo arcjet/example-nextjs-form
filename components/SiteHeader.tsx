@@ -61,7 +61,7 @@ export function SiteHeader() {
     return (
       <>
         <Link
-          href="https://github.com/arcjet/example-nextjs"
+          href="https://github.com/arcjet/example-nextjs-form"
           target="_blank"
           rel="noreferrer"
         >

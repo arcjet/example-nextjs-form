@@ -1,15 +1,15 @@
 {
-  "name": "example-nextjs",
-  "description": "Arcjet Next.js example app. Arcjet helps developers protect their apps in just a few lines of code. Bot detection. Rate limiting. Email validation. Attack protection. Data redaction. A developer-first approach to security.",
+  "name": "example-nextjs-form",
+  "description": "An example Next.js form + API route protected by Arcjet bot detection, rate limiting, and Shield WAF.",
   "license": "Apache-2.0",
   "homepage": "https://arcjet.com",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/arcjet/example-nextjs.git",
+    "url": "git+https://github.com/arcjet/example-nextjs-form.git",
     "directory": "arcjet"
   },
   "bugs": {
-    "url": "https://github.com/arcjet/example-nextjs/issues",
+    "url": "https://github.com/arcjet/example-nextjs-form/issues",
     "email": "support@arcjet.com"
   },
   "author": {
