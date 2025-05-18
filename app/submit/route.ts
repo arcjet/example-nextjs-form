@@ -14,7 +14,7 @@ const aj = arcjet({
       // Block all bots except the following
       allow: [
         // See the full list at https://arcjet.com/bot-list
-        "CATEGORY:SEARCH_ENGINE", // Google, Bing, etc       
+        "CATEGORY:SEARCH_ENGINE", // Google, Bing, etc
         "CATEGORY:PREVIEW", // Link previews e.g. Slack, Discord
       ],
     }),

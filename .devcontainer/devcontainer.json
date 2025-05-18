@@ -9,9 +9,7 @@
   },
   "customizations": {
     "vscode": {
-      "extensions": [
-        "trunk.io"
-      ]
+      "extensions": ["trunk.io"]
     }
   }
   // Features to add to the dev container. More info: https://containers.dev/features.

@@ -11,7 +11,8 @@
 lines of code. Bot detection. Rate limiting. Email validation. Attack
 protection. Data redaction. A developer-first approach to security.
 
-This is an example Next.js application demonstrating how to protect a Next.js form which uses an API route.
+This is an example Next.js application demonstrating how to protect a Next.js
+form which uses an API route.
 
 ## Features
 

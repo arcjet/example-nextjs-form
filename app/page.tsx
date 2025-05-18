@@ -24,19 +24,22 @@ export default function IndexPage() {
             className={styles.link}
           >
             bot protection
-          </Link>,{" "}
+          </Link>
+          ,{" "}
           <Link
             href="https://docs.arcjet.com/rate-limiting/concepts"
             className={styles.link}
           >
             rate limiting
-          </Link>, and{" "}
+          </Link>
+          , and{" "}
           <Link
             href="https://docs.arcjet.com/shield/concepts"
             className={styles.link}
           >
             Shield WAF
-          </Link>.
+          </Link>
+          .
         </p>
       </div>
 
