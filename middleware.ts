@@ -1,16 +1,17 @@
 import * as nosecone from "@nosecone/next";
 
+// Arcjet Nosecone is an open source library that helps set security headers
+// such as Content-Security-Policy (CSP). This configuration provides basic
+// protection for this Next.js application, but with some exceptions to allow
+// for the next-themes and Vercel Analytics features.
+//
+// See https://docs.arcjet.com/nosecone/quick-start for more information
 const noseconeConfig: nosecone.NoseconeOptions = {
   ...nosecone.defaults,
   contentSecurityPolicy: {
     ...nosecone.defaults.contentSecurityPolicy,
     directives: {
       ...nosecone.defaults.contentSecurityPolicy.directives,
-      imgSrc: [
-        ...nosecone.defaults.contentSecurityPolicy.directives.imgSrc,
-        "https://vercel.com", // Deploy button
-        "https://www.netlify.com", // Deploy button
-      ],
       scriptSrc: [
         // We have to use unsafe-inline because next-themes and Vercel Analytics
         // do not support nonce
@@ -20,19 +21,14 @@ const noseconeConfig: nosecone.NoseconeOptions = {
         "'self'",
         "'unsafe-inline'",
         "'unsafe-eval'",
-        "https://plausible.io", // Analytics
       ],
       connectSrc: [
         ...nosecone.defaults.contentSecurityPolicy.directives.connectSrc,
-        "https://plausible.io", // Analytics
       ],
       // We only set this in production because the server may be started
       // without HTTPS
       upgradeInsecureRequests: process.env.NODE_ENV !== "development",
     },
-  },
-  crossOriginEmbedderPolicy: {
-    policy: "credentialless", // Allows embedding the deploy buttons
   },
 } as const;
 

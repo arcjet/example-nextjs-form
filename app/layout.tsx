@@ -6,7 +6,6 @@ import { cn } from "@/lib/utils";
 import "@/styles/globals.css";
 import type { Viewport } from "next";
 import { Metadata } from "next";
-import Script from "next/script";
 import styles from "./layout.module.css";
 
 export const viewport: Viewport = {
@@ -46,13 +45,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <>
       <html lang="en" suppressHydrationWarning>
-        <head>
-          <Script
-            defer
-            src="https://plausible.io/js/script.js"
-            data-domain="arcjet.com"
-          />
-        </head>
         <body className={cn(styles.body, fontSans.variable)}>
           <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
             <div className={styles.container}>
