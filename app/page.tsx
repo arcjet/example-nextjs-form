@@ -18,7 +18,7 @@ export default function IndexPage() {
       <div className={sharedStyles.Section}>
         <h1 className={styles.title}>Protected form</h1>
         <p className={styles.description}>
-          This form is protected by Arcjet's{" "}
+          This form is protected by Arcjet{"'"}s{" "}
           <Link
             href="https://docs.arcjet.com/bot-protection/concepts"
             className={styles.link}
