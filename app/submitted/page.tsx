@@ -1,16 +1,12 @@
-import pageStyles from "@/components/elements/PageShared.module.scss";
-import styles from "./page.module.css";
-
-export default function SubmittedPage() {
+export default function IndexPage() {
   return (
-    <section className={pageStyles.Content}>
-      <div className={pageStyles.Section}>
-        <h1 className={styles.pageHeading}>Submitted</h1>
-        <p className={styles.pageDescription}>
-          The form was submitted, but this is just an example so nothing will
-          happen.
+    <div className="page">
+      <section className="section">
+        <h1 className="heading-primary">Form submitted</h1>
+        <p className="typography-primary">
+          If this were a real form, your message would have been submitted.
         </p>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 }
