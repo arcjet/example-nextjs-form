@@ -1,31 +1,6 @@
+import { type NextRequest, NextResponse } from "next/server";
 import { formSchema } from "@/app/schema";
-import arcjet, { detectBot, shield, slidingWindow } from "@arcjet/next";
-import { NextRequest, NextResponse } from "next/server";
-
-const aj = arcjet({
-  // Get your site key from https://app.arcjet.com
-  key: process.env.ARCJET_KEY,
-  rules: [
-    // Shield protects your app from common attacks e.g. SQL injection
-    shield({ mode: "LIVE" }),
-    // Create a bot detection rule
-    detectBot({
-      mode: "LIVE", // Blocks requests. Use "DRY_RUN" to log only
-      // Block all bots except the following
-      allow: [
-        // See the full list at https://arcjet.com/bot-list
-        "CATEGORY:SEARCH_ENGINE", // Google, Bing, etc
-        "CATEGORY:PREVIEW", // Link previews e.g. Slack, Discord
-      ],
-    }),
-    // Create a token bucket rate limit. Other algorithms are supported.
-    slidingWindow({
-      mode: "LIVE",
-      interval: "10m", // Refill every 10 minutes
-      max: 2, // Allow 2 requests per interval
-    }),
-  ],
-});
+import arcjet from "@/lib/arcjet";
 
 export async function POST(req: NextRequest) {
   const json = await req.json();
@@ -42,7 +17,7 @@ export async function POST(req: NextRequest) {
 
   // The protect method returns a decision object that contains information
   // about the request.
-  const decision = await aj.protect(req);
+  const decision = await arcjet.protect(req);
 
   console.log("Arcjet decision: ", decision);
 
